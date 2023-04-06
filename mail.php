@@ -23,13 +23,13 @@ function send_mail($recipient,$subject,$message)
   $mail->Port       = 587;
   $mail->Host       = "smtp.gmail.com";
   //$mail->Host       = "smtp.mail.yahoo.com";
-  $mail->Username   = "xyz@gmail.com"; //Enter your mail here
+  $mail->Username   = "xyz@gmail.com"; //Enter your email here
   $mail->Password   = "12345678"; //Enter the generated password
 
   $mail->IsHTML(true);
   $mail->AddAddress($recipient, "Esteemed user");
-  $mail->SetFrom("xyz@gmail.com", "xyz");
-  //$mail->AddReplyTo("reply-to-email", "reply-to-name");
+  $mail->SetFrom("xyz@gmail.com", "xyz"); // Enter the same email here and then enter your random username at the 'xyz'
+  //$mail->AddReplyTo("reply-to-email", "reply-to-name"); 
   //$mail->AddCC("cc-recipient-email", "cc-recipient-name");
   $mail->Subject = $subject;
   $content = $message;
